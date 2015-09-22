@@ -1,0 +1,19 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+#wrapper {
+  width: 980px;
+  margin: 0 auto;
+  background-color: #bdc3c7;
+}
+h1 {
+  margin-top: 10px;
+  margin-left: 5px;
+  color: white;
+}
+.list{
+  display: flex;
+  justify-content: space-between;
+  max-width: 950px;
+  list-style: none;
+}

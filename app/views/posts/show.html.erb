@@ -1,0 +1,15 @@
+<h1>Posts#show</h1>
+
+<div class="container">
+<h2>
+  <%= @post.title %>
+</h2>
+
+<p>
+  <%= @post.body  %>
+</p>
+
+<div class="edit_post">
+  <%= link_to 'Edit This Post', edit_post_path(id: @post.id) %>
+</div>
+</div>

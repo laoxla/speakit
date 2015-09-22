@@ -1,0 +1,17 @@
+<div class="container">
+  <h1>Edit</h1>
+
+
+  <%= simple_form_for @post do |f| %>
+  <%= f.input :title %>
+  <%= f.input :body %>
+  <%= f.input :created_at %>
+  <%= f.button :submit %> or
+    <%= link_to 'Delete', {controller:'posts', action:'delete', id: @post.id}, method: :delete, data: {confirm: "Are you sure?"} %>
+    <%
+     # why did this not work with this route:
+     #   delete 'posts/:id' => 'posts#delete', as: :delete_post
+     # </ = link_to 'Delete', "delete_post_path", method: :delete, data: {confirm: "Are you sure?"} />
+    %>
+<% end %>
+</div>

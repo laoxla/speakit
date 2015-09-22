@@ -1,0 +1,16 @@
+
+<div class="container">
+
+<% @posts.each do |post| %>
+<h2>
+  <%= link_to post.title, post_path(id: post.id) %>
+</h2>
+
+<p>
+  <%= simple_format truncate(post.body, length: 140)  %>
+</p>
+<small>Published <%= distance_of_time_in_words_to_now post.created_at %> ago. </small>
+
+
+<% end %>
+</div>

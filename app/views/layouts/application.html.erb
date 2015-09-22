@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Speakit</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div id= "wrapper">
+
+  <div class="container">
+
+ <nav class="navbar navbar-inverse">
+  <h1> <%= 'Speakit' %> </h1>
+
+</nav>
+
+<ul class="list">
+  <li>
+  <h5> <%= link_to'Home', root_path %> </h5>
+</li>
+<li>
+  <h5> <%= link_to 'New post', new_post_path %> </h5>
+</li>
+</ul>
+
+<hr>
+<br>
+
+
+<%= yield %>
+
+
+<br>
+<br>
+<hr>
+<footer class="container">
+  <p> Copyright © 2015 Ola Siyanbola. All Rights Reserved</p>
+  </footer>
+
+</div>
+</div>
+</body>
+</html>
